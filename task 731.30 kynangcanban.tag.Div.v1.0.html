@@ -1,0 +1,56 @@
+<html>
+<header>
+    <title> Task: kỹ năng căn bản - tag - Div - 731.30</title>
+
+    <style>
+        .bg-div {
+            background-color: #ddd;
+        }
+    </style>
+</header>
+
+<body>
+    <h1> Kỹ năng xử lý tag Div - phần tử vùng </h1>
+
+    <div class="bg-div" id="div-tag">Div Tag sample</div>
+    <hr>
+
+    <button onclick="onBtnDocInnerHTMLPhanTuDivClick()">Truy vấn và Đọc innerHTML phần tử Div</button>
+    <button onclick="onBtnAnHienPhanTuDivClick()">Ẩn/Hiện phần tử Div</button>
+    <button onclick="onBtnDoiCoPhanTuDivClick()">Đổi cỡ phần tử Div</button>
+
+    <hr>
+    <h1> Hãy làm 03 thao tác trên, cho thẻ div dưới đây</h1>
+    <div class="bg-div" id="div-tag-exercise">Div Tag Exercise</div>
+
+</body>
+<script>
+    // Truy vấn và đọc innerHTML phần tử Div
+    function onBtnDocInnerHTMLPhanTuDivClick() {
+        var vDivElement = document.getElementById("div-tag");
+        console.log("Inner HTML Phần tử Div :....");
+        console.log("Inner HTML = " + vDivElement.innerHTML);
+    }
+    // Ẩn/Hiện phần tử Div
+    function onBtnAnHienPhanTuDivClick() {
+        var vDivElement = document.getElementById("div-tag");
+        if (vDivElement.style.display === "none") {  //nếu đang ẩn thì hiện ra 
+            console.log("Hiện Phần tử Div :....");
+            vDivElement.style.display = "block"; //hiện ra 
+        } else {  //còn nếu đang hiện thì ẩn đi
+            console.log("Ẩn Phần tử Div :....");
+            vDivElement.style.display = "none";  //ẩn đi
+        }
+    }
+    // Đổi cỡ phần tử Div
+    function onBtnDoiCoPhanTuDivClick() {
+        var vDivElement = document.getElementById("div-tag");
+        console.log("Đổi cỡ phần tử Div :....");
+        
+        vDivElement.style.width = "20rem";
+        vDivElement.style.height = "160px";
+    }
+
+</script>
+
+</html>
